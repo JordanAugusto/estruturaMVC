@@ -1,0 +1,42 @@
+MVC (Model-View-Controller) e PSR-4 (PHP Standards Recommendation 4) 
+para autoloading de classes. 
+
+Organiza de forma a separar responsabilidades e facilitar a manutenção e escalabilidade do projeto. 
+O uso da PSR-4 facilita o carregamento automático de classes, garantindo uma estrutura de código limpa e fácil de entender.
+
+Validaçao de rotas e modelos
+Validaçao de bancos
+Modelos de respostas
+
+Estrura do projeto:
+
+- .htaccess: utilizado para configurar o servidor web, geralmente o Apache, para manipular as URLs de forma amigável. 
+    Ele é comumente usado para reescrever URLs, removendo extensões de arquivos e tornando os URLs mais legíveis. 
+
+- PUBLIC armazenam os recursos estáticos da aplicação, como folhas de estilo CSS, imagens e scripts JavaScript, 
+    que são acessíveis publicamente. Isso inclui tudo o que será acessado diretamente pelo navegador como:
+
+    css
+    img
+    js
+
+- SRC Diretório Principal do Código Fonte:
+
+    controller: Contém os controladores da aplicação, que são responsáveis por 
+    manipular as requisições HTTP e interagir com os modelos e as visões para gerar uma resposta.
+    
+    Core: O núcleo da aplicação, onde classes essenciais para o funcionamento geral da aplicação são colocadas. 
+    Pode incluir lógica de negócios comum, manipuladores de erro, etc.
+    
+    Http: Este diretório pode conter classes relacionadas ao processamento de requisições e respostas HTTP, 
+    incluindo manipulação de rotas.
+    
+    models: : Classes que representam e interagem com o banco de dados. 
+    Aqui, conterar a lógica para recuperar, inserir, atualizar e excluir dados.
+    
+    routes: Define as rotas da aplicação, especificando quais controladores devem ser chamados para cada URL.
+
+    services: Pode conter classes que oferecem serviços específicos para a aplicação, 
+    como manipulação de arquivos, envio de e-mails, etc.
+    
+    utils: Classes utilitárias que fornecem funcionalidades gerais e podem ser reutilizadas em várias partes do código.
